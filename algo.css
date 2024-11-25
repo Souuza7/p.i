@@ -1,0 +1,340 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos do header */
+header {
+    background-color: #d8d5a9; /* Pistache */
+    color: #4a4a2d; /* Verde Escuro */
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-produ$produtos: center;
+    padding-top: 100px;
+    margin-bottom: 200px;
+}
+
+header .logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 50px;
+}
+
+header nav {
+    flex-grow: 1;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #000000; /* Tom de Pistache Escuro */
+}
+
+.btn-reserva {
+    background-color: #a3a67f; /* Tom de Pistache Escuro */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reserva:hover {
+    background-color: #9b9b6f;
+}
+
+/* Estilos do hero */
+.hero {
+    background: url('path/to/your/hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.btn-explore {
+    background-color: #a3a67f; /* Tom de Pistache Escuro */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #9b9b6f;
+}
+
+/* Seção de Produtos */
+.produtos .container-produtos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.produto-card {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 15px;
+}
+
+.produto-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.produto-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-add {
+    display: inline-block;
+    background-color: #9b9b6f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #d8d5a9;
+}
+
+/* Carrinho */
+.carrinho {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carrinho table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.carrinho table th,
+.carrinho table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.carrinho table th {
+    background-color: #f4f4f4;
+}
+
+.btn-remove {
+    display: inline-block;
+    color: #f44336;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+    background-color: #ffdddd;
+}
+
+.btn-finalizar {
+    background-color: #9b9b6f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-finalizar:hover {
+    background-color: #d8d5a9;
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #d8d5a9;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (ex: celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-produ$produtos: center;
+        padding: 20px 0;
+    }
+
+    header .logo img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-produ$produtos: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .produtos .container-produtos {
+        justify-content: center;
+    }
+
+    .produto-card {
+        width: 200px;
+    }
+
+    .carrinho {
+        width: 90%;
+    }
+
+    footer {
+        position: relative;
+        padding: 20px;
+    }
+}
+
+/* Para tablets */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-produ$produtos: center;
+        padding: 30px 0;
+    }
+
+    .produtos .container-produtos {
+        justify-content: center;
+    }
+
+    .produto-card {
+        width: 220px;
+    }
+
+    .carrinho {
+        width: 80%;
+    }
+}
+
+
+
+
+
+$produtos = [
+    ['id' => 1, 'nome' => 'Spaguete Carbonara', 'preco' => 65.00, 'imagem' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xmBLnEEZiONfdpuyDNCZadCZbi3qmGZSAQ&s'],
+    ['id' => 2, 'nome' => 'Lasagna á bolonhesa', 'preco' => 85.00, 'imagem' => 'https://assets.unileversolutions.com/recipes-v2/229470.jpg'],
+    ['id' => 3, 'nome' => 'Fettuccine Alfredo', 'preco' => 70.00, 'imagem' => 'https://www.receiteria.com.br/wp-content/uploads/fettuccine-alfredo-rotated.jpeg'],
+    ['id' => 4, 'nome' => 'Ravioli de ricota e espinafre', 'preco' => 75.00, 'imagem' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6CRHNhsDWbLituPJxkkNj9hLSIg134n5Yw&s'],
+    ['id' => 5, 'nome' => 'Tagliatelle ao pesto', 'preco' => 72.00, 'imagem' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvyRC6twCVm3TPTyk8bQTePGP5dIvDbytN0Q&s'],
+    ['id' => 6, 'nome' => 'Picanha', 'preco' => 79.90, 'imagem' => 'https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/picanha-aa0c51c6-1920w.jpg'],
+    ['id' => 7, 'nome' => 'Bife á parmegiana ', 'preco' => 49.90, 'imagem' => 'https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2022/10/01/414797907-bife-parmegiana-mix-de-queijos.jpg'],
+    ['id' => 8, 'nome' => 'Frango grelhado', 'preco' => 45.00, 'imagem' => 'https://catracalivre.com.br/wp-content/uploads/2023/10/peito-frango-grelhado.jpg'],
+    ['id' => 9, 'nome' => 'Tomahawk steak', 'preco' => 85.00, 'imagem' => 'https://irp.cdn-website.com/33406c6e/dms3rep/multi/Tomahawk-1f3b6f14.jpg'],
+    ['id' => 10, 'nome' => 'Tiramisu', 'preco' => 25.00, 'imagem' => 'https://static.itdg.com.br/images/1200-675/4667c6b17f2c045e601de0d092c2d318/339498-original-1-.jpg'],
+    ['id' => 11, 'nome' => 'Panna cotta', 'preco' => 22.00, 'imagem' => 'https://s2-receitas.glbimg.com/fkbAb7fTTu_emkmGWgPWj8I-6lA=/0x0:677x452/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/l/N/bkmTJyQtm6f9qlqqpj0Q/panna.jpg'],
+    ['id' => 12, 'nome' => 'Profiteteroles ', 'preco' => 30.00, 'imagem' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIXLzIMBiV2Ajc5Z6p698tuG3Nw6okNASqIw&s'],
+    ['id' => 13, 'nome' => 'Pavê de chocolate', 'preco' => 28.00, 'imagem' => 'https://cdnm.westwing.com.br/glossary/uploads/br/2021/08/20174609/Fatia-de-pav%C3%AA-de-chocolate-Pinterest-p-a0069.jpg'],
+    ['id' =>14, 'nome' => 'Gelato', 'preco' => 15.00, 'imagem' => 'https://fsp.usp.br/eccco/wp-content/uploads/2022/09/texto-01-Gelato_10-07_to_22_808-1200x800.jpg'],
+    ['id' => 15, 'nome' => 'Cheesecake de frutas vermelhas', 'preco' => 25.00, 'imagem' => 'https://i.ytimg.com/vi/a8cBTbtlvR8/maxresdefault.jpg'],
+    ['id' => 16, 'nome' => 'Vinho tinto', 'preco' => 90.00, 'imagem' => 'https://www.divinho.com.br/blog/wp-content/uploads/2020/08/Vinho-Tinto.jpg'],
+    ['id' => 17, 'nome' => 'Cerveja artesanal', 'preco' => 10.00, 'imagem' => 'https://png.pngtree.com/png-vector/20230830/ourlarge/pngtree-glass-of-white-wine-png-image_9202249.png'],
+    ['id' => 18, 'nome' => 'Vinho branco', 'preco' => 90.00, 'imagem' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4J_F4r-t5Gun77QQbEQCmXiofz3xTlWI2Ng&s'],
+    ['id' => 20, 'nome' => 'Àgua mineral', 'preco' => 10.00, 'imagem' => 'https://www.reservatoriodeaguamineral.com.br/wp-content/uploads/2019/09/A-%C3%A1gua-mineral..jpg'],
+    ['id' => 21, 'nome' => 'Àgua gaseificada', 'preco' => 10.00, 'imagem' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu7fXXZ0fiT3O1KFUZCucrS7f8xQ_K0CCCBQ&s'],
+    ['id' => 22, 'nome' => 'Refrigerante', 'preco' => 10.00, 'imagem' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSntIERd_j_VOZyzTpQ9u_kICZzeSCKTSGlLA&s'],
+    // Adicione as demais imagens e produtos aqui
+];

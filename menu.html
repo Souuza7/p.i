@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pasta Perfetta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+ /* Reset básico */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333; /* Cor de Texto Escuro */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 150px;
+}
+  
+/* Estilos do header */
+header {
+    background-color: #d8d5a9; /* Pistache */
+    color: #4a4a2d; /* Verde Escuro */
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+}
+
+header .logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 50px;
+}
+
+header nav {
+    flex-grow: 1;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+
+h2 {
+    color: #000000;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 150px;
+    font-size: 2em;
+    text-align: center;
+    top: 120px;  /* Move o título 20px para baixo */
+    transform: translateY(20px);  /* Move o título suavemente para baixo */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #000000; /* Verde Escuro */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #000000; /* Tom de Pistache Escuro */
+}
+
+.btn-reserva {
+    background-color: #000000; /* Tom de Pistache Escuro */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reserva:hover {
+    background-color: #000000; /* Tom de Pistache Escuro mais claro */
+}
+
+/* Estilos do hero */
+.hero {
+    background: url('path/to/your/hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.btn-explore {
+    background-color: #000000; /* Tom de Pistache Escuro */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #000000; /* Tom de Pistache Escuro mais claro */
+}
+/* Estilos do footer */
+footer {
+    background-color: #d8d5a9; /* Pistache */
+    padding: 20px 0;
+}
+
+footer .contato,
+footer .social-media,
+footer .mapa {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer .contato p {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    color: #4a4a2d; /* Verde Escuro */
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #333; /* Cor de Texto Escuro */
+}
+
+footer .mapa iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 5px;
+}
+
+* {box-sizing:border-box}
+
+h1.title {
+    color: black;
+}
+
+h2.section-title {
+    color: black;
+}
+
+
+    
+        h2 {
+    color: #000000;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 50px;
+    font-size: 2em;
+    text-align: center;
+  
+}
+   
+     
+        main {
+            padding: 20px 0;
+        }
+        .menu-section {
+            margin-bottom: 40px;
+            padding: 10px;
+            background: #fff; /* Fundo para seções */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000000;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background: white;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            transform: scale(1.03);
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #000000; /* Borda para imagens */
+        }
+        .item-details {
+            padding: 15px;
+        }
+        .item-details h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #444;
+        }
+        .item-details p {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #666;
+        }
+        .price {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #000000;
+        }
+   
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu em telas menores */
+        flex-direction: column; /* Coloca os itens em coluna */
+        position: absolute; /* Posiciona o menu */
+        top: 60px; /* Abaixo do header */
+        left: 0;
+        right: 0;
+        background-color: #000000; /* Fundo do menu */
+        z-index: 10; /* Coloca na frente */
+    }
+
+    nav ul.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone do menu em telas menores */
+        cursor: pointer; /* Cursor de pointer */
+    }
+
+    .menu-icon i {
+        font-size: 24px; /* Tamanho do ícone */
+        color: #ffffff; /* Cor do ícone */
+    }
+}
+
+
+
+
+
+
+
+.menu-icon {
+    display: none; /* Oculta o ícone por padrão */
+}
+
+.menu-icon label {
+    cursor: pointer;
+    font-size: 24px; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone */
+}
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Esconde o menu */
+        flex-direction: column; /* Coloca os itens em coluna */
+        position: absolute; /* Remove do fluxo normal */
+        background-color: #000000; /* Fundo do menu */
+        top: 60px; /* Posição do menu */
+        right: 0; /* Alinha à direita */
+        width: 100%; /* Largura total */
+        padding: 10px 0; /* Espaçamento vertical */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.show {
+        display: flex; /* Exibe o menu quando ativado */
+    }
+
+    .menu-icon {
+        display: block; /* Exibe o ícone em telas menores */
+    }
+
+    #chk:checked + label + nav ul {
+        display: flex; /* Exibe o menu ao clicar no ícone */
+    }
+
+    nav a {
+        font-size: 18px; /* Aumenta o tamanho da fonte em telas menores */
+        padding: 10px; /* Ajusta o espaçamento interno */
+    }
+}
+/* Para telas muito pequenas (como celulares em modo retrato) */
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* Para uma coluna em telas muito pequenas */
+    }
+
+    header nav ul li a {
+        font-size: 1rem; /* Ajuste no tamanho da fonte para telas menores */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Ajuste no tamanho da fonte do footer */
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo {
+        margin-bottom: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* Para 2 colunas em telas menores */
+    }
+
+    /* Menu hambúrguer */
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    header nav ul {
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    header nav ul.active {
+        display: block;
+    }
+
+    header nav ul li {
+        margin: 1rem 0;
+    }
+
+    .menu-item {
+        padding: 0.5rem;
+    }
+
+    .menu-item img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+  /* Botão Voltar ao Topo */
+  #backToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #d8d5a9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        display: none; /* Inicialmente escondido */
+        transition: background 0.3s;
+    }
+
+    #backToTop:hover {
+        background: #c2b78d;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="inc_produto2.php">
+                <img src="La pasta logo.png" width="150" height="150" alt="LOGO">
+            </a>
+        </div>
+    
+        <nav>
+            <ul>
+            <li><a href="index.html">Início</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li><a href="inc_produto2.php">Reserva</a></li>
+            </ul>
+        </nav>
+    
+        <div class="menu-icon">
+            <input type="checkbox" id="chk" style="display: none;">
+            <label for="chk">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    
+    
+    <main>
+        <div class="container">
+            <!-- Seção de Pratos Principais -->
+            <section class="menu-section">
+                <h2 class="section-title">Nossos Pratos Principais</h2>
+                <div class="menu-grid">
+                    <article class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xmBLnEEZiONfdpuyDNCZadCZbi3qmGZSAQ&s" alt="Spaghetti Carbonara" loading="lazy">
+                        <div class="item-details">
+                            <h3>Spaghetti Carbonara</h3>
+                            <p>Deliciosa massa de spaghetti com um molho cremoso de ovos, queijo parmesão, bacon e pimenta.</p>
+                            <span class="price">R$ 65,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://assets.unileversolutions.com/recipes-v2/229470.jpg" alt="Lasagna à Bolonhesa" loading="lazy">
+                        <div class="item-details">
+                            <h3>Lasagna à Bolonhesa</h3>
+                            <p>Camadas de massa, molho à bolonhesa, queijo mussarela e molho bechamel, gratinada no forno.</p>
+                            <span class="price">R$ 80,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://www.receiteria.com.br/wp-content/uploads/fettuccine-alfredo-rotated.jpeg" alt="Fettuccine Alfredo" loading="lazy">
+                        <div class="item-details">
+                            <h3>Fettuccine Alfredo</h3>
+                            <p>Fettuccine com um molho cremoso de manteiga, queijo parmesão e creme de leite.</p>
+                            <span class="price">R$ 70,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6CRHNhsDWbLituPJxkkNj9hLSIg134n5Yw&s" alt="Ravioli de Ricota e Espinafre" loading="lazy">
+                        <div class="item-details">
+                            <h3>Ravioli de Ricota e Espinafre</h3>
+                            <p>Ravioli recheado com ricota e espinafre, servido com molho de tomate fresco e manjericão.</p>
+                            <span class="price">R$ 75,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvyRC6twCVm3TPTyk8bQTePGP5dIvDbytN0Q&s" alt="Tagliatelle ao Pesto" loading="lazy">
+                        <div class="item-details">
+                            <h3>Tagliatelle ao Pesto</h3>
+                            <p>Tagliatelle com molho pesto de manjericão, pinhões e queijo parmesão.</p>
+                            <span class="price">R$ 72,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/picanha-aa0c51c6-1920w.jpg" alt="Picanha" loading="lazy">
+                        <div class="item-details">
+                            <h3>Picanha</h3>
+                            <p>Um corte mais famoso do Brasil.</p>
+                            <span class="price">R$ 79,90</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2022/10/01/414797907-bife-parmegiana-mix-de-queijos.jpg" alt="Bife à Parmegiana" loading="lazy">
+                        <div class="item-details">
+                            <h3>Bife à Parmegiana</h3>
+                            <p>Servido com queijo e molho de tomate.</p>
+                            <span class="price">R$ 49,90</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://catracalivre.com.br/wp-content/uploads/2023/10/peito-frango-grelhado.jpg" alt="Frango Grelhado" loading="lazy">
+                        <div class="item-details">
+                            <h3>Frango Grelhado</h3>
+                            <p>Servido com molho de limão e ervas.</p>
+                            <span class="price">R$ 45,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://irp.cdn-website.com/33406c6e/dms3rep/multi/Tomahawk-1f3b6f14.jpg" alt="Tomahawk Steak." loading="lazy">
+                        <div class="item-details">
+                            <h3>Tomahawk Steak.</h3>
+                            <p>O Tomahawk Steak é um corte impressionante com um osso longo, conhecido por sua suculência e sabor robusto. Perfeito para grelhar e ideal para ocasiões especiais!
+                            </p>
+                            <span class="price">R$ 85,00</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Seção de Sobremesas -->
+            <section class="menu-section">
+                <h2 class="section-title">Nossas Sobremesas</h2>
+                <div class="menu-grid">
+                    <article class="menu-item">
+                        <img src="https://static.itdg.com.br/images/1200-675/4667c6b17f2c045e601de0d092c2d318/339498-original-1-.jpg" alt="Tiramisu" loading="lazy">
+                        <div class="item-details">
+                            <h3>Tiramisu</h3>
+                            <p>Clássica sobremesa italiana feita com café, mascarpone e cacau.</p>
+                            <span class="price">R$ 25,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://s2-receitas.glbimg.com/fkbAb7fTTu_emkmGWgPWj8I-6lA=/0x0:677x452/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/l/N/bkmTJyQtm6f9qlqqpj0Q/panna.jpg" alt="Panna Cotta" loading="lazy">
+                        <div class="item-details">
+                            <h3>Panna Cotta</h3>
+                            <p>Sobremesa cremosa de baunilha, servida com coulis de frutas vermelhas.</p>
+                            <span class="price">R$ 22,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIXLzIMBiV2Ajc5Z6p698tuG3Nw6okNASqIw&s" alt="Profiteroles" loading="lazy">
+                        <div class="item-details">
+                            <h3>Profiteroles</h3>
+                            <p>Bolinhos recheados com creme de baunilha, cobertos com chocolate.</p>
+                            <span class="price">R$ 30,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://cdnm.westwing.com.br/glossary/uploads/br/2021/08/20174609/Fatia-de-pav%C3%AA-de-chocolate-Pinterest-p-a0069.jpg" alt="Pavê de Chocolate" loading="lazy">
+                        <div class="item-details">
+                            <h3>Pavê de Chocolate</h3>
+                            <p>Delicioso pavê com camadas de biscoito e creme de chocolate.</p>
+                            <span class="price">R$ 28,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://fsp.usp.br/eccco/wp-content/uploads/2022/09/texto-01-Gelato_10-07_to_22_808-1200x800.jpg" alt="Gelato" loading="lazy">
+                        <div class="item-details">
+                            <h3>Gelato</h3>
+                            <p>Gelato cremoso em diversos sabores.</p>
+                            <span class="price">R$ 15,00</span>
+                        </div>
+                    </article>
+
+                    
+                    <article class="menu-item">
+                        <img src="https://i.ytimg.com/vi/a8cBTbtlvR8/maxresdefault.jpg" alt="Cheesecake de Frutas Vermelhas" loading="lazy">
+                        <div class="item-details">
+                            <h3>Cheesecake de Frutas Vermelhas</h3>
+                            <p>deliciosa cheesecake cremosa com frutas vermelhas e base crocante.</p>
+                            <span class="price">R$ 28,00</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Seção de Bebidas -->
+            <section class="menu-section">
+                <h2 class="section-title">Nossas Bebidas</h2>
+                <div class="menu-grid">
+                    <article class="menu-item">
+                        <img src="https://www.divinho.com.br/blog/wp-content/uploads/2020/08/Vinho-Tinto.jpg" alt="Vinho Tinto" loading="lazy">
+                        <div class="item-details">
+                            <h3>Vinho Tinto</h3>
+                            <p>Um vinho tinto encorpado e aromático.</p>
+                            <span class="price">R$ 95,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://png.pngtree.com/png-vector/20230830/ourlarge/pngtree-glass-of-white-wine-png-image_9202249.png" alt="Vinho Branco" loading="lazy">
+                        <div class="item-details">
+                            <h3>Vinho Branco</h3>
+                            <p>Vinho branco fresco e frutado, ideal para acompanhar massas.</p>
+                            <span class="price">R$ 90,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4J_F4r-t5Gun77QQbEQCmXiofz3xTlWI2Ng&s" alt="Cerveja Artesanal" loading="lazy">
+                        <div class="item-details">
+                            <h3>Cerveja Artesanal</h3>
+                            <p>Cerveja de produção local, com sabor intenso.</p>
+                            <span class="price">R$ 25,00</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <img src="https://www.reservatoriodeaguamineral.com.br/wp-content/uploads/2019/09/A-%C3%A1gua-mineral..jpg" alt="Água Mineral" loading="lazy">
+                        <div class="item-details">
+                            <h3>Água Mineral</h3>
+                            <p>Água mineral sem gás.</p>
+                            <span class="price">R$ 10,00</span>
+                        </div>
+                    </article>
+
+                    
+                    <article class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu7fXXZ0fiT3O1KFUZCucrS7f8xQ_K0CCCBQ&s" alt="Cerveja Artesanal" loading="lazy">
+                        <div class="item-details">
+                            <h3>Água gaseificada</h3>
+            <p>Água gaseificada refrescante.</p>
+                            <span class="price">R$ 10,00</span>
+                        </div>
+                    </article>
+
+                    
+                    <article class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSntIERd_j_VOZyzTpQ9u_kICZzeSCKTSGlLA&s" alt="Cerveja Artesanal" loading="lazy">
+                        <div class="item-details">
+                            <h3>Refrigerante</h3>
+                            <p>coca , guaraná , sprite.</p>
+                            <span class="price">R$ 10,00</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 La Pasta Perfetta. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <button id="backToTop" aria-label="Voltar ao topo" aria-hidden="true">Voltar ao Topo</button>
+    <script>
+
+const ScrollModule = (() => {
+        const backToTopButton = document.getElementById('backToTop');
+        const header = document.querySelector('header');
+        let isScrolling = false;
+
+        const init = () => {
+            backToTopButton.style.display = "none";
+            backToTopButton.addEventListener('click', scrollToTop);
+            window.addEventListener('scroll', onScroll);
+        };
+
+        const onScroll = () => {
+            if (!isScrolling) {
+                isScrolling = true;
+                requestAnimationFrame(handleScroll);
+            }
+        };
+
+        const handleScroll = () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            toggleBackToTopButton(scrollTop);
+            toggleHeaderStyle(scrollTop);
+            isScrolling = false;
+        };
+
+        const toggleBackToTopButton = (scrollTop) => {
+            backToTopButton.style.display = scrollTop > 200 ? "block" : "none";
+        };
+
+        const toggleHeaderStyle = (scrollTop) => {
+            header.classList.toggle('scrolled', scrollTop > 50);
+        };
+
+        const scrollToTop = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        return { init };
+    })();
+
+    document.addEventListener('DOMContentLoaded', ScrollModule.init);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('Página carregada com sucesso!');
+        
+        // Função para rolagem suave
+        const smoothScroll = (event) => {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+    
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' // Garante que o topo da seção esteja alinhado com o topo da tela
+                });
+            }
+        };
+    
+        // Adiciona eventos de clique para rolagem suave nos links de navegação
+        const anchors = document.querySelectorAll('nav a');
+        anchors.forEach(anchor => anchor.addEventListener('click', smoothScroll));
+    
+        // Mostrar/ocultar botão de reserva com base na rolagem
+        const btnReserva = document.querySelector('.btn-reserva');
+        if (btnReserva) {
+            const toggleReservaButton = () => {
+                if (window.scrollY > 100) {
+                    btnReserva.style.opacity = '1';
+                    btnReserva.style.transition = 'opacity 0.3s ease';
+                } else {
+                    btnReserva.style.opacity = '0';
+                }
+            };
+    
+            window.addEventListener('scroll', toggleReservaButton);
+            toggleReservaButton(); // Chama a função inicialmente para definir a visibilidade
+        }
+    
+        // Alterna a classe 'active' no menu hamburguer
+        const menuIconLabel = document.querySelector('.menu-icon label');
+        if (menuIconLabel) {
+            menuIconLabel.addEventListener('click', () => {
+                const menu = document.querySelector('nav ul');
+                menu.classList.toggle('active');
+                document.body.classList.toggle('menu-open'); // Adiciona um estilo no body para bloquear o scroll quando o menu está aberto
+            });
+        }
+    
+        // Destacar a seção ativa na navegação (feedback visual)
+        const sections = document.querySelectorAll('section');
+        const updateActiveNavLink = () => {
+            const scrollPosition = window.scrollY;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const link = document.querySelector(`a[href="#${section.id}"]`);
+    
+                if (scrollPosition >= sectionTop - 50 && scrollPosition < sectionTop + sectionHeight - 50) {
+                    link.classList.add('active');  // Destaca o link ativo
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        };
+    
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink();  // Chama inicialmente para definir o estado correto
+    
+        // Função para mostrar botão de "Voltar ao topo"
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            const toggleBackToTopButton = () => {
+                if (window.scrollY > 200) {
+                    backToTopButton.style.opacity = '1';
+                } else {
+                    backToTopButton.style.opacity = '0';
+                }
+            };
+    
+            window.addEventListener('scroll', toggleBackToTopButton);
+            toggleBackToTopButton();  // Chama inicialmente para definir o estado do botão
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>
